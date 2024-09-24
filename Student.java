@@ -1,27 +1,24 @@
-package org.student;
+package week6.day1;
 
-import org.department.Department;
+public class Student {
 
-public class Student extends Department {
+	public void getStudentInfo(int id) {
+		System.out.println(id);
+	}
 
-	public void studentName() {
-		System.out.println("PravinRaj");
+	public void getStudentInfo(int id, String name) {
+		System.out.println("Student id : " + id + "\n" + "Student name : " + name);
 	}
-	public void studentDept() {
-		System.out.println("BCA");
+
+	public void getStudentInfo(String email, long phoneNumber) {
+		System.out.println("Email : " + email + "\n" + "PhoneNumber : " + phoneNumber);
 	}
-	public void studentId() {
-		System.out.println(20210629);
-	}
+
 	public static void main(String[] args) {
-		Student obj = new Student();
-		obj.collegeName();
-		obj.collegeCode();
-		obj.collegeRank();
-		obj.deptName();
-		obj.studentName();
-		obj.studentDept();
-		obj.studentId();
+		Student obj=new Student();
+		obj.getStudentInfo(20210629);
+		obj.getStudentInfo(20210629, "Pravinraj");
+		obj.getStudentInfo("pravinraj@gmail.com", 786808188l);
 	}
 
 }
